@@ -6,12 +6,27 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { CanActivate } from '@angular/router/src/utils/preactivation';
 import { AuthGuard } from './auth.guard';
+import { ProfilesComponent } from './profiles/profiles.component';
+import { ModelsComponent } from './models/models.component';
+import { FeaturesComponent } from './features/features.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/events',
+    redirectTo: '/profiles',
     pathMatch: 'full'
+  },
+  {
+    path: 'profiles',
+    component: ProfilesComponent
+  },
+  {
+    path: 'models',
+    component: ModelsComponent
+  },
+  {
+    path: 'features',
+    component: FeaturesComponent
   },
   {
     path: 'events',

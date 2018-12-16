@@ -1,0 +1,29 @@
+<div class="row mt-5">
+  <div class="col-md-4 mb-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">New Profile</h5>
+        <p class="card-text">Create a new profile</p>
+        <br>
+        <a href="#" class="btn btn-success">+ CREATE</a>
+      </div>
+      <div class="card-footer text-muted">
+        <br>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3" *ngFor="let profile of profiles">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">{{profile.ProfileID}}</h5>
+        <p class="card-text">{{profile.ModelID}} : {{profile.ModelName}}</p>
+        <p class="card-text">Query : {{profile.FeatureQuery}}</p>
+        <p class="card-text">Created By: {{profile.UserID}}</p>
+        <a href="#" class="btn btn-primary">View Results</a>
+      </div>
+      <div class="card-footer text-muted">
+        {{profile.Year}}
+      </div>
+    </div>
+  </div>
+</div>

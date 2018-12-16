@@ -13,6 +13,12 @@ import { AuthService } from './auth.service';
 import { EventService } from './event.service';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { ProfilesComponent } from './profiles/profiles.component';
+import { ServicesComponent } from './services/services.component';
+import { ServiceInvokerComponent } from './service-invoker/service-invoker.component';
+import { ModelsComponent } from './models/models.component';
+import { FeaturesComponent } from './features/features.component';
+import { DataSharingService } from './services/data-sharing.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,12 @@ import { TokenInterceptorService } from './token-interceptor.service';
     RegisterComponent,
     LoginComponent,
     EventsComponent,
-    SpecialEventsComponent
+    SpecialEventsComponent,
+    ProfilesComponent,
+    ServicesComponent,
+    ServiceInvokerComponent,
+    ModelsComponent,
+    FeaturesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +41,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
   ],
   providers: [AuthService,
     EventService,
+    ServiceInvokerComponent,
+    DataSharingService,
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
